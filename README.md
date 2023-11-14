@@ -28,8 +28,8 @@ Create table Employee(
 ```sql
 /* insert data into employee table */
 insert into Employee (EmpName, gender, department, emailid, phoneno, position, salary) values 
-    ('John Doe','M','IT', 'john@gmail.com',123456789, 'Developer', 60000.00 ),
-    ('Jane Smith','F','HR', 'jane@gmail.com',987654321, 'HR Specialist', 70000.00 ),
+    ('Jyoti','F','IT', 'Jyoti@gmail.com',123456789, 'Developer', 60000.00 ),
+    ('Hema','F','HR', 'Hema@gmail.com',987654321, 'HR Specialist', 70000.00 ),
     -- Add more data here...
 ```
 
