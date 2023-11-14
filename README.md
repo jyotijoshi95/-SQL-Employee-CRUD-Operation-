@@ -30,7 +30,9 @@ Create table Employee(
 insert into Employee (EmpName, gender, department, emailid, phoneno, position, salary) values 
     ('Jyoti','F','IT', 'Jyoti@gmail.com',123456789, 'Developer', 60000.00 ),
     ('Hema','F','HR', 'Hema@gmail.com',987654321, 'HR Specialist', 70000.00 ),
-    -- Add more data here...
+  ('Priyanka','F','IT', 'Priyanka@gmail.com',123456789, 'Developer', 60000.00 ),
+    ('Sneha','F','HR', 'Sneha@gmail.com',987654321, 'HR Specialist', 70000.00 ),
+   
 ```
 
 ### Select All Employee Data
