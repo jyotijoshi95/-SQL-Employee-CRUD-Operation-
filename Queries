@@ -1,0 +1,67 @@
+## Employee Information System
+
+### Table of Contents
+- [Create Employee Table](#create-employee-table)
+- [Insert Data into Employee Table](#insert-data-into-employee-table)
+- [Select All Employee Data](#select-all-employee-data)
+- [Update Gender and Salary](#update-gender-and-salary)
+- [Querying Employee Information](#querying-employee-information)
+
+### Create Employee Table
+```sql
+/* create employee table */
+Create table Employee(
+    Id int identity(1,1) primary key,
+    EmpName varchar(50),
+    Gender char(1),
+    Department varchar(50),
+    EmailId varchar(50),
+    Phoneno int,
+    Position varchar(50),
+    Salary float
+)
+```
+
+### Insert Data into Employee Table
+```sql
+/* insert data into employee table */
+insert into Employee (EmpName, gender, department, emailid, phoneno, position, salary) values 
+    ('Jyoti','F','IT', 'Jyoti@gmail.com',123456789, 'Developer', 60000.00 ),
+    ('Hema','F','HR', 'Hema@gmail.com',987654321, 'HR Specialist', 70000.00 ),
+  
+
+### Select All Employee Data
+```sql
+/* select all employee data */
+Select * From Employee
+```
+
+### Update Gender and Salary
+```sql
+/* set Gender value to "F" for employees in the IT department */
+update Employee set gender = 'F' where Department = 'IT'
+
+/* increase salary by 10% for employees in the HR department */
+update Employee set Salary = Salary * 1.10 where Department = 'HR'
+```
+
+### Querying Employee Information
+```sql
+/* get employees who are in the IT department and have a salary greater than 50000 */
+select * from Employee where Department = 'IT' and Salary > 50000
+
+/* get employees in the HR department with a position of HR Specialist */
+Select * from Employee where department = 'HR' and Position = 'HR Specialist'
+
+/* get the top 5 highest-paid employees */
+Select Top 5 * from Employee order by Salary desc
+
+/* get employees who have a salary between 60000 and 80000 */
+Select * from Employee where Salary between 60000 and 80000
+
+/* get employees with a gender of "M" and a position of "Developer" */
+Select * from Employee where Gender = 'M' and Position = 'Developer'
+
+/* get the average salary for employees in each department */
+Select Department, AVG(Salary) as AverageSalary from Employee group by Department
+```
